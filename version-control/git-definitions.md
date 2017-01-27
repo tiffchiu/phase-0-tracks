@@ -8,7 +8,7 @@ Version control is a way to track changes over time so that you could revisit or
 
 * What is a branch and why would you use one?
 
-A branch is essentially another timeline. It is a copy of a particular file and allows you to make changes and continue on that path before you decide whether to merge it back into the master or to discard it. It is used to keep the master branch clean, so that you are able to work on features without fear of breaking the entire project. It is also a good way for multiple developers to work on different features of the same project simultaneously.
+A branch creates another timeline. It is a copy of a particular file and allows you to make changes and continue on that path before you decide whether to merge it back into the master or to discard it. It is used to keep the master branch clean, so that you are able to work on features without fear of breaking the entire project. It is also a good way for multiple developers to work on different features of the same project simultaneously.
 
 * What is a commit? What makes a good commit message?
 
