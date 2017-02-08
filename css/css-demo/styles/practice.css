@@ -12,3 +12,11 @@
 .unordered-list {
 	font-size: .8em;
 }
+
+p:hover {
+  background-color: blue;
+}
+
+section > p { 
+  background-color: yellow;
+}
