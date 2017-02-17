@@ -1,0 +1,45 @@
+Release 0: Elevator
+
+- Figure out which floor you are currently on
+- If the floor you want to get to is lower than the current floor:
+	- Press the arrow down button
+- If the floor you want to get to is higher than the current floor:
+	- Press the arrow up button
+- When elevator door opens, step inside
+- Make a 180 degree turn
+- Move towards the buttons either on the left or right side of the wall
+- Press button of the floor you want to go to
+- Door closes
+- When elevator stops at the floor you want to get to, leave the elevator
+
+
+Release 1: Teeth Brushing
+
+- Enter bathroom
+- Open medicine cabinet
+- Take out toothpaste, cup, and toothbrush and place on counter
+- Close medicine cabinet
+- Turn on the sink and fill cup with water
+- Place on the counter
+- Unscrew lid of toothpaste and place on counter
+- Take toothbrush in dominant hand and toothpaste in the other
+- Apply toothpaste onto toothbrush through a squeezing motion for 3 seconds
+- If it is enough toothpaste:
+	- Set the toothpaste down on the counter
+- If there is not enough toothpaste:
+	- Repeat steps from "Apply toothpaste... " until sufficient
+- Open mouth
+- Insert toothbrush on the surface of the bottom line of teeth
+- Brush in a circular motion
+- Spit
+- Insert toothbrush on the surface of the upper line of teeth
+- Brush in a circular motion
+- Spit
+- Take the cup of water
+- Rinse mouth with water
+- Spit out the water
+- Turn on the sink
+- Wash the toothbrush
+- Screw lid of toothpaste
+- Open medcine cabinet
+- Put toothpaste, cup, and toothbrush back in cabinet
