@@ -1,0 +1,13 @@
+Release 0: Elevator
+
+- Figure out which floor you are currently on
+- If the floor you want to get to is lower than the current floor:
+	- Press the arrow down button
+- If the floor you want to get to is higher than the current floor:
+	- Press the arrow up button
+- When elevator door opens, step inside
+- Make a 180 degree turn
+- Move towards the buttons either on the left or right side of the wall
+- Press button of the floor you want to go to
+- Door closes
+- When elevator stops at the floor you want to get to, leave the elevator
