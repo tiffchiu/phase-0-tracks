@@ -18,6 +18,9 @@ until employees == 0
 	puts "Would you like to enroll in the company's health insurance (y/n)?"
 	insurance = gets.chomp
 
+	puts "What allergies do you have (type 'done' when finished)?"
+	allergies = gets.chomp
+
 	real_age = 2017 - year_born
 
 	if age == real_age
@@ -26,7 +29,21 @@ until employees == 0
 		age_is_correct = false
 	end
 
-	if age_is_correct && (garlic_bread == "y" || insurance == "y")
+	allergies_done = false
+
+	until allergies_done 
+		if allergies == "sunshine"
+			allergies_done = true
+		elsif allergies == "done"
+			allergies_done = true
+		else 
+			allergies = gets.chomp
+		end
+	end
+
+	if allergies == "sunshine"
+		result = "Probably a vampire"
+	elsif age_is_correct && (garlic_bread == "y" || insurance == "y")
 		result = "Probably not a vampire"
 	elsif !age_is_correct && garlic_bread == "n" && insurance == "n"		
 		result = "Almost certainly a vampire"
