@@ -12,3 +12,25 @@ garlic_bread = gets.chomp
 
 puts "Would you like to enroll in the company's health insurance (y/n)?"
 insurance = gets.chomp
+
+real_age = 2017 - year_born
+
+if age == real_age
+	age_is_correct = true
+else
+	age_is_correct = false
+end
+
+if age_is_correct && (garlic_bread == "y" || insurance == "y")
+	result = "Probably not a vampire"
+elsif !age_is_correct && garlic_bread == "n" && insurance == "n"		
+	result = "Almost certainly a vampire"
+elsif !age_is_correct && (garlic_bread == "n" || insurance == "n")
+	result = "Probably a vampire"
+elsif name == "Drake Cula" || name == "Tu Fang"
+	result = "Definitely a vampire"
+else
+	result = "Results inconclusive"
+end
+
+puts result
