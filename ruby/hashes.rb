@@ -14,3 +14,15 @@
 # 	- Skip step
 # - Print newest version of hash
 # - Exit
+
+puts "Client name:"
+client_name = gets.chomp
+
+puts "Client age:"
+client_age = gets.chomp
+
+puts "Number of children:"
+number_of_children = gets.chomp
+
+puts "Decor theme:"
+decor_theme = gets.chomp
