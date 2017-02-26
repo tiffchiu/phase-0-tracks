@@ -11,6 +11,7 @@
 # - Add all the characters together into a string
 # - Capitalize the first letter of each name
 
+
 def alias_creator (realname)
 
 # Split as two separate words, changes the order, and combines into one
@@ -67,8 +68,35 @@ name_array = reversed_name.chars
 	
 	spy_name = name_array.join
 
-p spy_name
-
 end
 
-alias_creator("Felicia Torres")
+# alias_creator("Felicia Torres")
+
+
+real_names = [ ]
+
+puts "Who are you creating a spy name for?"
+input = gets.chomp
+real_names.push(input)
+
+while input != "quit"
+	input = gets.chomp
+	real_names.push(input)
+end
+
+real_names.delete("quit")
+
+aliases = real_names.clone
+
+aliases.map! do |name|
+	alias_creator(name)
+end
+
+# p real_names
+# p aliases
+
+real_names.zip(aliases)
+
+real_names.zip(aliases).each do |pair|
+ 	puts pair[1] + " is actually " + pair[0]
+ end
