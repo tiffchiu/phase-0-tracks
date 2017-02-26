@@ -35,3 +35,14 @@ client_information = {
 }
 
 puts client_information
+
+puts "What do you need to edit? If everything looks good, type 'none'."
+edits = gets.chomp
+
+if edits != "none"
+	puts "Change #{edits} to:"
+	changed_info = gets.chomp
+	client_information[edits.to_sym] = changed_info
+end
+
+puts client_information
