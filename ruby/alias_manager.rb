@@ -11,11 +11,11 @@
 # - Add all the characters together into a string
 # - Capitalize the first letter of each name
 
-name = "Felicia Torres"
+def alias_creator (realname)
 
 # Split as two separate words, changes the order, and combines into one
 # Returns as a string
-reversed_name = name.split(' ').reverse!.join(' ')
+reversed_name = realname.split(' ').reverse!.join(' ')
 
 # Creates an array of the letters in the name
 name_array = reversed_name.chars
@@ -68,3 +68,7 @@ name_array = reversed_name.chars
 	spy_name = name_array.join
 
 p spy_name
+
+end
+
+alias_creator("Felicia Torres")
