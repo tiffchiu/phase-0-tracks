@@ -1,0 +1,12 @@
+# Pseudocode
+- Take a string with a first and a last name
+- Split the string into two separate words
+- Change the order of the two words
+- Change the uppercase letters into lowercase
+- Convert each name string into individual character strings
+- If letter is a consonant
+	- Advance to the next letter in alphabet
+- If letter is vowel
+	- Adcance to next vowel in a, e, i, o, u
+- Add all the characters together into a string
+- Capitalize the first letter of each name
