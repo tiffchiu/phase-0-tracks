@@ -26,3 +26,12 @@ number_of_children = gets.chomp.to_i
 
 puts "Decor theme:"
 decor_theme = gets.chomp
+
+client_information = {
+	name: client_name,
+	age: client_age,
+	children: number_of_children,
+	theme: decor_theme
+}
+
+puts client_information
