@@ -19,10 +19,10 @@ puts "Client name:"
 client_name = gets.chomp
 
 puts "Client age:"
-client_age = gets.chomp
+client_age = gets.chomp.to_i
 
 puts "Number of children:"
-number_of_children = gets.chomp
+number_of_children = gets.chomp.to_i
 
 puts "Decor theme:"
 decor_theme = gets.chomp
