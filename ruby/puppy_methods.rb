@@ -27,6 +27,23 @@ class Puppy
 
 end
 
+class Koala
+
+	def initialize
+		puts "Initializing new koala instance ..."
+	end
+
+	def sleep(hours)
+		puts "Fred sleeps #{hours} hours a day"
+	end
+
+	def eats(food)
+		puts "*eating #{food}*"
+	end
+
+end
+
+
 # Driver Code
 
 # Initializes instance of puppy
@@ -36,11 +53,24 @@ cody = Puppy.new
 # p cody.class
 
 cody.fetch("ball") 
-
 cody.speak(5)
-
 cody.roll_over
-
 cody.dog_years(3)
-
 cody.dance
+
+
+fred = Koala.new
+
+fred.sleep(15)
+fred.eats("eucalyptus")
+
+# 50.times { |block_count| puts "This block has already run #{block_count} times." }
+
+i = 0
+while i < 50 do 
+	Koala.new
+	i += 1 
+end
+
+
+
