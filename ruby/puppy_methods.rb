@@ -5,6 +5,22 @@ class Puppy
     toy
   end
 
+  def speak(int)
+  	puts "Woof! " * int
+  end
+
+  def roll_over
+  	puts "*rolls over*"
+  end
+
+  def dog_years(human_years)
+  	p human_years * 7
+  end
+
+  def dance
+  	puts "*stands on hind legs*"
+  end
+
 end
 
 # Driver Code
@@ -16,4 +32,11 @@ cody = Puppy.new
 # p cody.class
 
 cody.fetch("ball") 
-cody.fetch(3)
+
+cody.speak(5)
+
+cody.roll_over
+
+cody.dog_years(3)
+
+cody.dance
