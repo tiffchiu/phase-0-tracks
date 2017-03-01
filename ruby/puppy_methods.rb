@@ -34,7 +34,7 @@ class Koala
 	end
 
 	def sleep(hours)
-		puts "Fred sleeps #{hours} hours a day"
+		puts "*sleeping #{hours} hours a day*"
 	end
 
 	def eats(food)
@@ -66,11 +66,24 @@ fred.eats("eucalyptus")
 
 # 50.times { |block_count| puts "This block has already run #{block_count} times." }
 
+koala = [ ]
+
 i = 0
 while i < 50 do 
-	Koala.new
+	koala << Koala.new
 	i += 1 
 end
+
+# p koala
+
+koala.each do |koala_activity|
+	koala_activity.sleep(15)
+	koala_activity.eats("eucalyptus")
+end
+
+
+
+
 
 
 
