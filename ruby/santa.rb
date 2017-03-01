@@ -7,15 +7,15 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = (1..140).to_a.sample
 
 	end
 
-	def about
-		puts @gender
-		puts @ethnicity
-		puts @reindeer_ranking
-	end
+	# def about
+	# 	puts @gender
+	# 	puts @ethnicity
+	# 	puts @reindeer_ranking
+	# end
 
 	# getter methods 
 	# def age
@@ -68,28 +68,29 @@ end
 # santas << Santa.new("N/A", "N/A")
 # p santas
 
-# SAMPLE INITIALIZATION CODE
-# santas = []
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
-# p santas
-
-
-santa = Santa.new("agender", "Australia")
+# santa = Santa.new("agender", "Australia")
+# # santa.about
+# santa.gender = "female"
+# # santa.about
+# santa.celebrate_birthday
+# santa.get_mad_at("Vixen")
 # santa.about
-santa.gender = "female"
-# santa.about
-santa.celebrate_birthday
-santa.get_mad_at("Vixen")
-santa.about
-p santa.age
-puts "This santa is #{santa.age} years old and from #{santa.ethnicity}."
-
+# p santa.age
+# puts "This santa is #{santa.age} years old and from #{santa.ethnicity}."
 
 # santa = Santa.new("female", "Icelandic")
 # santa = Santa.new("gender fluid", "Mexico")
 # santa = Santa.new("male", "Hungary")
 # santa = Santa.new("bigender", "China")
+
+
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+100.times do
+  santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	puts "Gender: #{santa.gender}"
+  	puts "Ethnicity: #{santa.ethnicity}"
+  	puts "Age: #{santa.age}"
+end
