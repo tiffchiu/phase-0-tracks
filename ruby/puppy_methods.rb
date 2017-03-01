@@ -21,6 +21,10 @@ class Puppy
   	puts "*stands on hind legs*"
   end
 
+  def initialize
+  	puts "Initializing new puppy instance ..."
+  end
+
 end
 
 # Driver Code
