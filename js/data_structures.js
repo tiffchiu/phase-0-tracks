@@ -14,3 +14,24 @@ if (colors.length == horseNames.length) {
 }
 
 console.log(horseDetails)
+
+
+// CAR FUNCTION
+
+function Cars(make, model, year) {
+	this.make = make;
+	this.model = model;
+	this.year = year;
+
+	this.completed = function() { console.log("Car has been completely built")};
+};
+
+var car = new Cars("Acura", "TL", 2014);
+console.log(car);
+// console.log(car.make);
+car.completed();
+
+var car2 = new Cars("Volkswagen", "Jetta", 2010);
+console.log(car2);
+car2.completed();
+
