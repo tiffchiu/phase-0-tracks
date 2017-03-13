@@ -19,8 +19,33 @@ function longest_word(words) {
 	return benchmark
 }
 
+// - Gets two objects
+// - Identifies the keys of each object
+// - Compares the keys of the objects to each other
+// - Get the values of each object
+// - Compares the values to each other
+
+function matches(object1, object2) {
+	var items1 = Object.keys(object1);
+	var items2 = Object.keys(object2);
+	
+	for (i = 0; i < items1.length; i++) {
+		if (items1[i] == items2[i]) {
+			return true;
+		} 
+		else {
+			return false;
+		}
+	}
+}
+
 // DRIVER CODE
 
 var words = ["long phrase","longest phrase","longer phrase","supercalifragilisticexpialidocious"]
 
-console.log(longest_word(words))
+console.log(longest_word(words));
+
+var person1 = {name: "Steven", age: 54};
+var person2 = {name: "Tamir", age: 54};
+
+console.log(matches(person1, person2));
