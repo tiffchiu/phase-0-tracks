@@ -34,26 +34,42 @@ end
 # add_run_entry(db, "2017-03-10 17:30:00", 3, 28, 'Still struggling')
 # add_run_entry(db, 3, 28, 'Still struggling')
 
-puts "Yay you finished a run!"
 
-puts "How many miles did you run today?"
-distance = gets.chomp.to_i
+# USER INTERFACE
 
-puts "How many minutes did you run for?"
-run_time = gets.chomp.to_i
+puts "CHOOSE AN ACTION: \n1 - Add new entry \n2 - Display all entries \n3 - Delete an entry"
+selection = gets.chomp.to_i
 
-puts "How did the run feel?"
-condition = gets.chomp
+runs = db.execute("SELECT * FROM runs")
+runs_list = runs.each do |run|
+		puts "#{run['id']} | #{run['run_date']} | #{run['distance']} miles | #{run['run_time']} minutes"
+	end
 
-puts "SUMMARY OF TODAY'S RUN"
-puts "Distance: #{distance}"
-puts "Running Time: #{run_time}"
-puts "Condition: #{condition}"
+if selection == 1
+	puts "How many miles did you run today?"
+	distance = gets.chomp.to_i
 
+	puts "How many minutes did you run for?"
+	run_time = gets.chomp.to_i
 
-add_run_entry(db, distance, run_time, condition)
+	puts "How did the run feel?"
+	condition = gets.chomp
 
-# retrieving data
-# runs = db.execute("SELECT * FROM runs")
-# # puts runs.class
-# puts runs
+	puts "SUMMARY OF TODAY'S RUN"
+	puts "Distance: #{distance}"
+	puts "Running Time: #{run_time}"
+	puts "Condition: #{condition}"
+
+	add_run_entry(db, distance, run_time, condition)
+
+elsif selection == 2
+	runs_list
+	
+elsif selection == 3
+	runs_list
+	puts "Select an entry to delete:"
+	id = gets.chomp.to_i
+
+	db.execute("DELETE FROM runs WHERE id=#{id}")
+
+end	
