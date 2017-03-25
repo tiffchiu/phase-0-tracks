@@ -12,6 +12,15 @@ get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
 # write a GET route with
 # route parameters
 get '/about/:person' do
@@ -21,6 +30,11 @@ end
 
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
+end
+
+get '/:number_1/plus/:number_2' do
+  sum = params[:number_1].to_i + params[:number_2].to_i
+  "#{params[:number_1]} + #{params[:number_2]} = #{sum}"
 end
 
 # write a GET route that retrieves
@@ -43,4 +57,10 @@ end
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
+end
+
+# ADDING A CONTACT ROUTE
+get '/contact/:address' do
+  address = params[:address]
+  "The address is #{address}."
 end
